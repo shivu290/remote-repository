@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <h2>Adding Property & Method to JS Object</h2>
+        <p id="demo"></p>
+        <script>
+            function person(fname, lname) 
+            {
+                this.firstname = fname;
+                this.lastname = lname;  
+            }
+
+            person.prototype.gender = "male";
+            person.prototype.getname = function() 
+            {
+                return this.firstname + " " + this.lastname;
+            }
+
+          
+            var john = new person("shiva","shiva");
+            document.getElementById("demo").innerHTML = john.getname(); 
+        </script>
+    </body>
+</html>
